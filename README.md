@@ -2,6 +2,9 @@
 
 Este projeto apresenta uma solução construída em **PyTorch** para a classificação de radiografias de tórax em duas categorias: **Normal** e **Pneumonia**. 
 
+<img width="5250" height="3543" alt="comparison_grid" src="https://github.com/user-attachments/assets/3112436b-f592-42f1-8c7c-e020da714bcb" />
+
+
 # Objetivo:
 - Classificar o diagnóstico de imagens de raio-x em uma classificação binária(Normal ou Pneumonia) e transformar em uma distribuição probabilística (função SoftMax).
 
