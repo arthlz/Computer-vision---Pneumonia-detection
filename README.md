@@ -52,6 +52,19 @@ Este projeto apresenta uma solução construída em PyTorch para a classificaç�
   ├── 📄 README.md                      # Documentação do projeto
   └── 📄 requirements.txt               # Dependências do ambiente
 ```
+# Metodologia
+A análise inicial do problema indicou a necessidade de modelos robustos capazes de extrair características complexas de imagens médicas. O problema foi formulado como uma tarefa de classificação de imagens utilizando Transfer Learning.
+
+Dada a especificidade das radiografias, adotou-se a estratégia de fine-tuning parcial: as camadas iniciais e intermediárias foram congeladas para preservar as features de baixo nível, enquanto os blocos de alto nível e o classificador final foram treinados. O classificador original foi substituído por uma rede sequencial contendo redução de dimensionalidade, Batch Normalization e Dropout para estabilização e regularização.
+
+# Modelos Avaliados
+- Redes Neurais Convolucionais: ResNet-50 (com aprendizado residual)
+
+- Vision Transformers: ViT-16 (com mecanismo de self-attention)
+  
+# Resultados
+Os resultados evidenciaram que a arquitetura ResNet-50 apresentou um desempenho levemente superior e mais estável. O modelo alcançou uma ROC-AUC de 0.9980 e um Recall de 0.98 para a classe de Pneumonia, indicando excelente capacidade de minimizar falsos negativos (cenário crítico onde um paciente doente seria liberado sem tratamento).
+
 ## 💻Programador:
 
 <table align="center">
