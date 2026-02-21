@@ -1,0 +1,19 @@
+# Ignorar ambiente virtual
+venv/
+.venv/
+env/
+
+# Ignorar arquivos temporários do Python
+__pycache__/
+*.pyc
+
+# Ignorar dados pesados
+dataset/
+*.zip
+*.csv
+*.pth
+
+# Ignorar configurações do editor
+.vscode/
+.idea/
+.ipynb_checkpoints/
