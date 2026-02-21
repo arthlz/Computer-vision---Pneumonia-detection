@@ -1,6 +1,6 @@
 # Detecção de Pneumonia (Classificação de Imagens Médicas).
 
-Este projeto apresenta uma solução construída em PyTorch para a classificação de radiografias de tórax em duas categorias: **Normal** e **Pneumonia**. 
+Este projeto apresenta uma solução construída em **PyTorch** para a classificação de radiografias de tórax em duas categorias: **Normal** e **Pneumonia**. 
 
 # Objetivo:
 - Classificar o diagnóstico de imagens de raio-x em uma classificação binária(Normal ou Pneumonia) e transformar em uma distribuição probabilística (função SoftMax).
@@ -64,6 +64,46 @@ Dada a especificidade das radiografias, adotou-se a estratégia de fine-tuning p
   
 # Resultados
 Os resultados evidenciaram que a arquitetura ResNet-50 apresentou um desempenho levemente superior e mais estável. O modelo alcançou uma ROC-AUC de 0.9980 e um Recall de 0.98 para a classe de Pneumonia, indicando excelente capacidade de minimizar falsos negativos (cenário crítico onde um paciente doente seria liberado sem tratamento).
+
+# Reprodutibilidade:
+   ```
+   Todo o código foi produzido e rodou localmente no python 3.10.7
+   ```
+
+1. Clone o repositório
+   ```bash
+   git clone https://github.com/arthlz/Pneumonia-detection-CV.git
+   ```
+   
+2. Acesse a pasta do projeto
+   ```pasta
+   cd Pneumonia-detection-CV
+   ```
+
+3. Baixe o dataset original e organize as pastas(Use como apoio a *estrutura do projeto*)
+   ```dataset
+   Extraia os arquivos baixados e coloque-os na raiz do projeto dentro de uma pasta chamada dataset
+   Certifique-se de que a estrutura esteja como: dataset/train/... e dataset/test_images/....
+   ```
+
+4. No terminal, crie um ambiente virtual e ative-o
+   ```Venv
+    python -m venv venv <- Cria o ambiente virtual
+   
+    - Dispositivos Windows:
+    .\venv\Scripts\activate -< Ativa o ambiente virtual
+   
+    - Dispositivos Linux/Mac:
+    source venv/bin/activate <- Ativa o ambiente virtual
+   ```
+
+5. Instale os requerimentos necessários:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+6. Abra e execute qualquer arquivo desejado.
+
 
 ## 💻Programador:
 
